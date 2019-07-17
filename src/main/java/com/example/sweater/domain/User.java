@@ -1,4 +1,4 @@
-package java.com.example.sweater.domain;
+package com.example.sweater.domain;
 
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -23,6 +23,8 @@ public class User implements UserDetails {
     private String password;
     @Getter(value = AccessLevel.NONE)
     private boolean active;
+    private String email;
+    private String activationCode;
 
     @ElementCollection(targetClass = Role.class, fetch = FetchType.EAGER)
     @CollectionTable(name = "user_role", joinColumns = @JoinColumn(name = "user_id"))

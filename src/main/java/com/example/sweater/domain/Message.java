@@ -1,4 +1,4 @@
-package java.com.example.sweater.domain;
+package com.example.sweater.domain;
 
 import lombok.Getter;
 import lombok.Setter;
