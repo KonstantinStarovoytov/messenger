@@ -4,13 +4,13 @@
 <div class="form-row">
     <div class="form-group col-md-6">
         <form method="get" action="/main" class="form-inline">
-            <input type="text" name="filter" class="form-control" value="${filter?ifExists}" placeholder="Search by tag">
-            <button type="submit" class="btn btn-primary ml-2">Search</button>
+            <input type="text" name="filter" class="form-control text-warning border border-warning bg-transparent" value="${filter?ifExists}" placeholder="Search by tag">
+            <button type="submit" class="btn btn-outline-warning ml-2">Search</button>
         </form>
     </div>
 </div>
 
-<a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+<a class="btn btn-outline-warning" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
     Add new Message
 </a>
 <div class="collapse <#if message??>show</#if>" id="collapseExample">
@@ -26,7 +26,7 @@
                 </#if>
             </div>
             <div class="form-group">
-                <input type="text" class="form-control"
+                <input type="text" class="form-control text-warning border border-warning bg-transparent"
                        value="<#if message??>${message.tag}</#if>" name="tag" placeholder="Тэг">
                 <#if tagError??>
                     <div class="invalid-feedback">
@@ -50,15 +50,15 @@
 
 <div class="card-columns">
     <#list messages as message>
-    <div class="card my-3">
+    <div class="card my-3 bg-transparent border-dark">
         <#if message.filename??>
-        <img src="/img/${message.filename}" class="card-img-top">
+        <img src="/img/${message.filename}" class="card-img-top border">
         </#if>
         <div class="m-2">
-            <span>${message.text}</span>
-            <i>${message.tag}</i>
+            <span class="text-light">${message.text}</span>
+            <i class="text-white-50"><#if message.tag??>#</#if>${message.tag}</i>
         </div>
-        <div class="card-footer text-muted">
+        <div class="card-footer text-muted bg-dark">
             ${message.authorName}
         </div>
     </div>

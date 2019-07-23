@@ -1,3 +1,9 @@
 body {
-    color: #113;
+    background:url('https://66.media.tumblr.com/f4a58a3b23eccbec2b22061ce6d34218/tumblr_punzh94sTp1uz2g97o5_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #998;
+}
+.card-footer {
+    opacity:0.5;
 }

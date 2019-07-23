@@ -25,8 +25,6 @@ public class User implements UserDetails {
     private String username;
     @NotBlank(message = "Password can not be empty")
     private String password;
-    @Transient
-    private String password2;
     @Getter(value = AccessLevel.NONE)
     private boolean active;
     @Email(message = "Email is not correct")
