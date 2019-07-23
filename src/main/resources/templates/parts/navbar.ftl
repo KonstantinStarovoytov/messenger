@@ -26,7 +26,14 @@
              </li>
             </#if>
         </ul>
-        <div class="navbar-text mr-3">${name}</div>
+        <#if name == "unknown">
+            <form action="/logout" method="post">
+                <input type="hidden" name="_csrf" value="${_csrf.token}" />
+                <button class="btn btn-outline-info" type="submit">Sign In</button>
+            </form>
+        <#else>
+        <div class="navbar-text mr-3 text-danger">${name}</div>
         <@l.logout />
+        </#if>
     </div>
 </nav>

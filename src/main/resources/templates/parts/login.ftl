@@ -63,8 +63,10 @@
         </div>
     </#if>
     <input type="hidden" name="_csrf" value="${_csrf.token}" />
-    <#if !isRegisterForm><a href="/registration" class="btn btn-outline-success">Add new user</a></#if>
-    <button class="btn btn btn-outline-info" type="submit"><#if isRegisterForm>Create<#else>Sign In</#if></button>
+    <div class="mx-auto">
+    <#if !isRegisterForm><a href="/registration" class="btn btn-outline-success col-sm-2">Sign Up</a></#if>
+    <button class="btn btn btn-outline-info px-md-4 mx-md-5 col-sm-2" type="submit"><#if isRegisterForm>Create<#else>Sign In</#if></button>
+    </div>
 </form>
 </#macro>
 
